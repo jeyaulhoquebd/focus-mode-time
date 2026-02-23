@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Focus Mode Time</h2>
+    <div id="timer-display">00:00</div>
+    
+    <div id="input-area">
+        <input type="text" id="task-name" placeholder="কী কাজ করবেন? (ঐচ্ছিক)">
+        <input type="number" id="minutes" placeholder="কত মিনিট?" min="1">
+        
+        <div class="options">
+            <label>
+                <input type="checkbox" id="sound-enabled" checked> 
+                সময় শেষে অ্যালার্ম বাজবে
+            </label>
+        </div>
+        
+        <button id="start-btn">Start Focus</button>
+    </div>
+
+    <button id="stop-btn">Stop Timer</button>
+    <button id="stop-alarm-btn">Stop Alarm (শব্দ থামান)</button>
+
+    <div class="history-container">
+        <h3>কাজের হিস্টোরি (মোট: <span id="task-count">0</span>)</h3>
+        <ul id="history-list"></ul>
+        <button id="clear-history-btn">হিস্টোরি মুছুন</button>
+    </div>
+    
+    <script src="popup.js"></script>
+</body>
+</html>
